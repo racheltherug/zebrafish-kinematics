@@ -50,7 +50,7 @@ tail_angle_TRUN4$TailAngle <- abs(tail_angle_TRUN4$TailAngle)
 tail_angle_TRUN6$TailAngle <- abs(tail_angle_TRUN6$TailAngle)
 
 ## wild type
-tail_angle_WT11$TailAngle <- abs(tail_angle_WT11$TailAngle)
+# tail_angle_WT11$TailAngle <- abs(tail_angle_WT11$TailAngle)
 tail_angle_WT10$TailAngle <- abs(tail_angle_WT10$TailAngle)
 tail_angle_WT6$TailAngle <- abs(tail_angle_WT6$TailAngle)
 tail_angle_WT5$TailAngle <- abs(tail_angle_WT5$TailAngle)
