@@ -5,7 +5,7 @@ f <- f[grep("Combined",f)]
 
 d_l <- lapply(f,read_csv)
 
-#This not all files have the same col names
+#This is because not all files have the same col names
 d <- lapply(d_l,function(x) x %>% select(Frame:Trial)) %>% do.call(rbind,.)
 
 d2 <- d %>% 
