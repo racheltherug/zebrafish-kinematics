@@ -32,7 +32,7 @@ for(i in f){
 #make list of cropped videos
 f.cropped <- list.files(full.names = T,pattern="_cropped.avi")
 
-for(i in f.cropped){
+for(i in f.cropped[102]){
   if(dir.exists("images")) unlink("images",recursive = T)
   
   #extract images
@@ -44,7 +44,7 @@ for(i in f.cropped){
 #check threshold
 img.ex <-list.files("./images",full.names = T)[43]
 
-thr.check(img.ex,min = 0.4,max=0.6)
+thr.check(img.ex,min = 0.2,max=0.6)
 
 images <- list.files("/images",full.names = T
 )

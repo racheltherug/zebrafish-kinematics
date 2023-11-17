@@ -4,11 +4,13 @@ library(emmeans)
 library(tidyverse)
 # setwd("C:/Working Directory/Kinematics Experiments")
 
+# cut fin trials
+
 # read in file for individual fish, choose Tail Angle data frame
-h5f <- h5read("TRUN8.5_2023_09_11-09_44_44.h5","/dataForWell0/dataForAnimal0/dataPerFrame")
+h5f <- h5read("AES.2.4_2023_11_13-12_11_52.h5","/dataForWell0/dataForAnimal0/dataPerFrame")
 
 # turn .h5 into .csv
-write.csv(h5f,"TRUN.8.5.csv",row.names=FALSE)
+write.csv(h5f,"AES.2.4.csv",row.names=FALSE)
 
 # read in files
 tail_angle_MED1 <- read.csv("Combined Data_MED1.csv")

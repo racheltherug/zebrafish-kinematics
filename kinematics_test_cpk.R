@@ -10,8 +10,8 @@ d <- lapply(d_l,function(x) x %>% select(Frame:Trial)) %>% do.call(rbind,.)
 
 d2 <- d %>% 
   group_by(Condition,`Fish ID`,Trial) %>% 
-  as.numeric(d$TailAngle) %>%
-  mutate(frame_per=Frame/max(Frame),TailAngle=abs(TailAngle)) 
+  mutate(max_Frame=max(Frame)) %>%
+  mutate(frame_per=Frame/max_Frame,TailAngle=abs(TailAngle)) 
 
 d2%>% 
   ggplot(aes(frame_per,TailAngle,col=as.factor(Trial)))+geom_point()+facet_wrap(.~Condition)
